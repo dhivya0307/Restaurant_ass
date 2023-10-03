@@ -42,6 +42,8 @@ header {
 
 .icon span {
     font-size: 40px;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .navmenu {
@@ -59,7 +61,7 @@ header {
 }
 
 .navmenu a:hover {
-    color: rgb(233, 54, 95);
+    color: darkorange;
 }
 
 #menu {
@@ -67,6 +69,7 @@ header {
     color: black;
     z-index: 1001;
     cursor: pointer;
+    
 }
 
 section {
@@ -126,13 +129,15 @@ section {
     font-weight: 700;
     text-transform: capitalize;
     background-color: #ffadad;
+    color: black;
     padding: 12px 30px;
     border-radius: 10px;
     transition: all .42s ease;
 }
 
 .main-btn:hover {
-    background-color: #cc3333;
+    background-color: blueviolet;
+    color:#eeeeee;
 }
 
 /* Media queries */
@@ -301,12 +306,18 @@ section {
     text-align: justify;
     margin-right: 30px;
     line-height: 22px;
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .about .about_btn{
     background: #fac031;
     padding: 25px 25px;
-    text-decoration: none;
+    text-decoration:underline;
     color: #fff;
     position: relative;
     left: 55%;
@@ -462,14 +473,15 @@ section {
 /* Footer */
 
 footer {
-    width: 100%;
+    width: auto;
+    height: auto;
     padding: 30px 0 0 20px;
     background: #eeeeee;
 }
 
 footer .footer_main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 footer .footer_main .footer_tag {
@@ -488,27 +500,41 @@ footer .footer_main .footer_tag p {
     font-size: 1.8rem;
 }
 
-footer .footer_main .footer_tag i {
+footer .footer_main .social {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 15px;
+}
+
+footer .footer_main .social i {
     margin: 0 5px;
     font-size: 2.5rem;
-    display: block;
+    display: flex; 
+    background-color: #eeeeee;
     gap: 4px;
     cursor: pointer;
 }
 
-footer .footer_main .footer_tag i:hover {
-    color: #fa3148;
+footer .footer_main .social i:hover {
+    color: #ff476c;
 }
 
-footer .end {
+footer .social span {
+    display: inline-flex;
+    float: right;
+}
+
+footer .footer_main .copy {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px;
 }
 
-footer .end span {
-    font-size: 1rem;
+ .copy {
+    font-size: 1.4rem;
     color: black;
-    margin-left: 10px;
+    text-align: center;
 }
+
