@@ -7,7 +7,9 @@
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+:root{
+    --color--orange:darkorange;
+}
 body {
     scroll-behavior: smooth;
 }
@@ -28,7 +30,7 @@ header {
 }
 
 .icon i {
-    color: darkorange;
+    color:var(--color--orange);
     font-size: 50px;
 }
 
@@ -125,6 +127,7 @@ section {
     text-transform: capitalize;
     background-color: #ffadad;
     padding: 12px 30px;
+    border-radius: 10px;
     transition: all .42s ease;
 }
 
@@ -302,12 +305,15 @@ section {
 
 .about .about_btn{
     background: #fac031;
-    padding: 12px 25px;
+    padding: 25px 25px;
     text-decoration: none;
     color: #fff;
     position: relative;
     left: 55%;
     bottom: 30px;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 10px;
 }
 
 /* Menu */
@@ -348,6 +354,7 @@ section {
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
+    margin-right: 200px;
 }
 
 .menu .menu_box .menu_card {
