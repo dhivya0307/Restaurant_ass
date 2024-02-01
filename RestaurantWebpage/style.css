@@ -7,9 +7,7 @@
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-:root{
-    --color--orange:darkorange;
-}
+
 body {
     scroll-behavior: smooth;
 }
@@ -30,7 +28,7 @@ header {
 }
 
 .icon i {
-    color:var(--color--orange);
+    color: darkorange;
     font-size: 50px;
 }
 
@@ -42,13 +40,12 @@ header {
 
 .icon span {
     font-size: 40px;
-    color:white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .navmenu {
     display: flex;
     align-items: center;
+    margin-left: 10px;;
 }
 
 .navmenu a {
@@ -61,7 +58,7 @@ header {
 }
 
 .navmenu a:hover {
-    color: darkorange;
+    color: rgb(233, 54, 95);
 }
 
 #menu {
@@ -69,7 +66,6 @@ header {
     color: black;
     z-index: 1001;
     cursor: pointer;
-    
 }
 
 section {
@@ -99,12 +95,15 @@ section {
 }
 
 .home-text h1 {
-    font-size: 80px;
+    font-size: 70px;
     color: #292929;
     font-weight: 700;
     line-height: 1.2;
     margin: 23px 0;
     font-family: 'Trebuchet MS', sans-serif;
+}
+.nav-icon{
+    visibility:hidden;
 }
 
 .home-text h1 span {
@@ -129,15 +128,12 @@ section {
     font-weight: 700;
     text-transform: capitalize;
     background-color: #ffadad;
-    color: black;
     padding: 12px 30px;
-    border-radius: 10px;
     transition: all .42s ease;
 }
 
 .main-btn:hover {
-    background-color: blueviolet;
-    color:#eeeeee;
+    background-color: #cc3333;
 }
 
 /* Media queries */
@@ -264,67 +260,63 @@ section {
     }
 }
 
-/*About*/
+/* About */
 
-.about{
+.about {
     width: 100%;
     height: 100vh;
     padding: 70px 0;
+    margin:30px;
 }
 
-.about .about_main{
+.about .about_main {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 
-.about .about_main .image img{
-    width: 800px;
+.about .about_main .image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     position: relative;
     top: 60px;
 }
 
-.about .about_main .about_text h1 span{
+.about .about_main .about_text h1 span {
     color: #fac031;
     margin-right: 15px;
     font-family: mv boli;
 }
 
-.about .about_main .about_text h1{
+.about .about_main .about_text h1 {
     font-size: 55px;
     position: relative;
     bottom: 50px;
 }
 
-.about .about_main .about_text h3{
+.about .about_main .about_text h3 {
     font-size: 30px;
     margin: 0 0 50px 0;
 }
 
-.about .about_main .about_text p{
-    width: 650px;
-    text-align: justify;
-    margin-right: 30px;
-    line-height: 22px;
-    color: #666;
+.about .about_main .about_text p {
+    width: 100%;
     font-size: 1.5rem;
-    line-height: 25px;
-    font-weight: 400;
-    margin-bottom: 40px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 0;
 }
 
-.about .about_btn{
+.about .about_btn {
     background: #fac031;
-    padding: 25px 25px;
-    text-decoration:underline;
+    padding: 30px 30px;
+    text-decoration: none;
     color: #fff;
     position: relative;
-    left: 55%;
-    bottom: 30px;
-    font-weight: 600;
-    font-size: large;
-    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    top:30%;
+    margin-top: 80px;
+    align-items: center;
 }
 
 /* Menu */
@@ -332,14 +324,17 @@ section {
 .menu {
     width: 100%;
     padding: 70px 0;
+    /* margin:30px; */
 }
 
 .menu h1 {
+    margin-bottom: 50px;
+    margin: right 10px;
     font-size: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-top: -130px;
 }
 
 .menu h1 span {
@@ -360,17 +355,16 @@ section {
 
 .menu .menu_box {
     width: 95%;
-    margin: 0 auto;
+    margin: 0;
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 15px;
-    margin-right: 200px;
+    grid-gap: 35px;
 }
 
 .menu .menu_box .menu_card {
-    width: 325px;
-    height: 480px;
+    width: 200px;
+    height: 400px;
     padding-top: 10px;
     margin-bottom: 20px;
     margin-left: 120px;
@@ -378,7 +372,7 @@ section {
 }
 
 .menu .menu_box .menu_card .menu_image {
-    width: 300px;
+    width: 200px;
     height: 245px;
     margin: 0 auto;
     overflow: hidden;
@@ -410,19 +404,19 @@ section {
 
 .menu .menu_box .menu_card:hover .small_card {
     position: relative;
-    top: -240px;
+    top: -200px;
     right: 20px;
     opacity: 1;
 }
 
 .menu .menu_box .menu_card .small_card i {
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 50px;
+    line-height: 0.1px;
     color: #ff0a0a;
-    cursor: pointer;
+    cursor: progress;
     text-shadow: 0 0 6px #000;
     transition: 0.2s;
 }
@@ -434,14 +428,15 @@ section {
 .menu .menu_box .menu_card .menu_info h2 {
     width: 60%;
     text-align: center;
-    margin: 10px auto 10px auto;
-    font-size: 25px;
+    margin: 15px auto 15px auto;
+    font-size: 15px;
     color: #fa3131;
 }
 
 .menu .menu_box .menu_card .menu_info h3 {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
 }
 
 .menu .menu_box .menu_card .menu_info .menu_icon {
@@ -461,8 +456,8 @@ section {
     text-decoration: none;
     color: white;
     background: darkorange;
-    padding: 12px 25px;
-    margin: 0 20px;
+    padding: 10px 20px;
+    margin:0px;
     transition: 0.3s;
 }
 
@@ -473,15 +468,14 @@ section {
 /* Footer */
 
 footer {
-    width: auto;
-    height: auto;
+    width: 100%;
     padding: 30px 0 0 20px;
     background: #eeeeee;
 }
 
 footer .footer_main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 footer .footer_main .footer_tag {
@@ -491,50 +485,36 @@ footer .footer_main .footer_tag {
 footer .footer_main .footer_tag h2 {
     color: #0600aa;
     margin-bottom: 25px;
-    font-size: 40px;
+    font-size: 30px;
     font-style: italic;
 }
 
 footer .footer_main .footer_tag p {
     margin: 10px 0;
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 
-footer .footer_main .social {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    padding: 15px;
-}
-
-footer .footer_main .social i {
+footer .footer_main .footer_tag i {
     margin: 0 5px;
-    font-size: 2.5rem;
-    display: flex; 
-    background-color: #eeeeee;
+    font-size: 1.5rem;
+    display: block;
     gap: 4px;
     cursor: pointer;
 }
 
-footer .footer_main .social i:hover {
-    color: #ff476c;
+footer .footer_main .footer_tag i:hover {
+    color: #fa3148;
 }
 
-footer .social span {
-    display: inline-flex;
-    float: right;
-}
-
-footer .footer_main .copy {
+footer .end {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px;
 }
 
- .copy {
-    font-size: 1.4rem;
+footer .end span {
+    font-size: 1rem;
     color: black;
-    text-align: center;
+    margin-left: 10px;
 }
-
